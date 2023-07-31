@@ -32,22 +32,22 @@ label start:
     scene bg slide06
     with fade
 
-    "The result are breathtaking."
+    "The results are breathtaking."
 
     show aoki speak at left
     show namura silent at right
 
     a "This enables automatic voice generation for the whole project."
-    n "This is super exiting."
+    n "This is super exciting."
 
     scene bg slide08
  
     a "This opens up new opportunities for creators and for players."
-    n "It starts the area of the Audio-Visual Novel."
+    n "It marks the beginning of a whole new era. The era of the audio-visual novel."
 
     scene bg slide09
 
-    "And there are siginificant market opportunities."
+    "And therefore there are significant market opportunities."
     
     scene bg meadow
     with fade
@@ -55,16 +55,18 @@ label start:
     show namura smile at right
 
     a "I am glad we finally found our voices."
-    n "Easier than I thought. And the quality is a-ma-zing!"
+    n "Easier than I thought. And the quality is amazing!"
     
     scene bg slide13
     with fade
 
     show namura smile at right
     
-    "But of course there is a lot left to do, adding more features, improving the code quality and create a couple of demo novels with other creators"
+    "But of course there is a lot left to do, adding more features, improving the code quality and creating a couple of audio-visual novels with other creators"
 
     n "and working on the business model! I could need help with that"
+
+    "Thank you for playing the demo. This is just the beginning for audio-visual Novels."
 
     # This ends the game.
 

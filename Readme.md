@@ -1,4 +1,4 @@
-# AudioVisual Novel Demo
+# Audio-Visual Novel Demo
 
 This is a demo for an audiovisual novel system, integrating [ElevenLabs](https://elevenlabs.io/) text-to-speech synthesis with the [Ren'Py](https://www.renpy.org/) visual novel engine. Made in 48 hours during the [LabLab](https://lablab.ai/) [ElevenLabs AI hackathon](https://lablab.ai/event/eleven-labs-ai-hackathon).
 
@@ -22,14 +22,14 @@ To try out the integration for yourself, follow these steps:
 ### Prepare the dialogue
 
 1. Prepare a game / interactive fiction / visual novel in Ren'Py
-2. Extract the dialogue data via the Ren'Py menu `Extract Dialogue`. This creates a file `dialogue.tab` in your game directory.
+2. Extract the dialogue data via the Ren'Py menu `Extract Dialogue`. This creates a file `dialogue.tab` in your project directory.
 3. Open this file in your editor. Note the entries in column "Character". The characters that are listed here, are defined in your script, e.g. `define a = Character("Aoki")`. An empty entry stands for the narrator. Add a "-" in each line that you don't wan't to generate. Also go through the `Dialogue` column and clean up any markup that might be there. You will send these strings to the ElevenLabs API.
-4. Open `generate_voices.py`. Enter your ElevenLabs API key via the environment variable ELEVEN_API_KEY or via the argument api_key in the `generate()` function (optional). Edit the character to voice mapping in function `getVoice()` according to the previous step. You have to use valid ElevenLabs voices. If you don't have an API key, use those included the free tier. Test the voices here: https://elevenlabs.io/speech-synthesis
+4. Open `generate_voices.py`. Provide your ElevenLabs API key via the environment variable ELEVEN_API_KEY or via the argument `api_key` in the `generate()` function (optional). Edit the character-to-voice mapping in function `getVoice()` according to step 3. You have to use ElevenLabs voices that are available for your access level. If you don't have an API key, use voices included the free tier. You can check this by running `python list_voices.py`. Test the voices here: https://elevenlabs.io/speech-synthesis
 5. Configure Ren'Py to use the automatic voice system by adding the line `define config.auto_voice = "voice/{id}.ogg"` in the Ren'Py file `options.rpy`
 
 ### Generate the voices
 
-6. Run `python generate_voices.py [your Ren'Py game directory]` This will create a subdirectory `voice`, call the Elevenlabs API to generate the audio files and store them with the identifier names from `dialogue.tab`.
+6. Run `python generate_voices.py [your Ren'Py project directory]`. This will create a subdirectory `voice` inside of the `game` dirctory, call the Elevenlabs API to generate the audio files and store them with the identifier names from `dialogue.tab`.
 
 ### Postprocess the voices
 
