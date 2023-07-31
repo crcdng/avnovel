@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/gui.rpy", line 12: invalid character '×' (U+00D7)
+    gui.init(1920×1080)
+                  ^
+
+Ren'Py Version: Ren'Py 8.1.1.23060707
+Mon Jul 31 00:34:04 2023

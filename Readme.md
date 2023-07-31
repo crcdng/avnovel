@@ -6,15 +6,16 @@ A visual novel is a form of interactive fiction, one that combines text, images 
 
 I am using the [Ren'Py automatic voice feature](https://www.renpy.org/doc/html/voice.html#automatic-voice) to demonstrate adding ElevenLabs voices to a visual novel. There are two Python scripts (for now) that do the job: [generate_voices.py](generate_voices.py) and [wav_to_ogg.py](wav_to_ogg.py). 
 
-You can check out the folder `avdemo` for the demo. You can play it live here: TODO
+You can check out the folder `avdemo` for the demo. The web demo is at https://github.com/crcdng/avnovel_demo
+You can play it live here: https://crcdng.github.io/avnovel_demo/
 
-To try out the integration yourself, follow these steps: 
+To try out the integration for yourself, follow these steps: 
 
 ### What you need
 
 * An editor such as [VSCode](https://code.visualstudio.com/) with the [Ren'Py extension](https://marketplace.visualstudio.com/items?itemName=LuqueDaniel.languague-renpy)
 * [Ren'Py](https://www.renpy.org/)
-* A Python 3 environment - I recommend using [conda](https://docs.conda.io/en/latest/miniconda.html) for setting it up
+* A Python 3 environment - I recommend using [conda](https://docs.conda.io/en/latest/miniconda.html) 
 * The ElevenLabs Python API. Add it to your Python enviroment with `pip install elevenlabs`
 * [ffmpeg](https://www.ffmpeg.org/) to convert audio from `.wav` to `.ogg`
 
@@ -28,7 +29,7 @@ To try out the integration yourself, follow these steps:
 
 ### Generate the voices
 
-6. Run `python generate_voices.py [your Ren'Py game directory]` This will create a subdirectory `voice`, call the Elevenlabs API and generate the audio files and store them.
+6. Run `python generate_voices.py [your Ren'Py game directory]` This will create a subdirectory `voice`, call the Elevenlabs API to generate the audio files and store them with the identifier names from `dialogue.tab`.
 
 ### Postprocess the voices
 
@@ -45,7 +46,7 @@ Note these scripts, demo and accompanying materials were made in 48 hours in the
 Possible code improvements / Next steps:
 
 * eliminate some of the manual steps above
-* add more features
+* add more features, e.g multilingual support
 * add a UI 
 * improve the code quality 
 * add tests
@@ -55,5 +56,6 @@ Possible code improvements / Next steps:
 Characters: [kid-blue](kid-blue.deviantart.com)
 Backgrounds: TODO
 
+Ren'Py license: https://www.renpy.org/doc/html/license.html
 
 

@@ -1,47 +1,68 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 21, in script
-    "You've created a new Ren'Py game."
-OSError: Couldn't find file 'voice/start_984ab428.ogg'.
+While loading <renpy.display.im.Image object ('gui/overlay/main_menu.png') at 0x7fa2cba393d0>:
+OSError: Couldn't find file 'gui/overlay/main_menu.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 21, in script
-    "You've created a new Ren'Py game."
-  File "/Applications/renpy-8.1.1-sdk/renpy/ast.py", line 930, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "/Applications/renpy-8.1.1-sdk/renpy/exports.py", line 1473, in say
-    who(what, *args, **kwargs)
-  File "/Applications/renpy-8.1.1-sdk/renpy/character.py", line 1352, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "/Applications/renpy-8.1.1-sdk/renpy/character.py", line 1003, in do_display
-    display_say(who,
-  File "/Applications/renpy-8.1.1-sdk/renpy/character.py", line 693, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "/Applications/renpy-8.1.1-sdk/renpy/ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Applications/renpy-8.1.1-sdk/renpy/python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
   File "/Applications/renpy-8.1.1-sdk/renpy/ui.py", line 299, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/Applications/renpy-8.1.1-sdk/renpy/display/core.py", line 3579, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Applications/renpy-8.1.1-sdk/renpy/display/core.py", line 4376, in interact_core
-    renpy.audio.audio.periodic()
-  File "/Applications/renpy-8.1.1-sdk/renpy/audio/audio.py", line 1222, in periodic
-    raise_(exc[0], exc[1], exc[2])
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 444, in raise_
-  File "/Applications/renpy-8.1.1-sdk/renpy/audio/audio.py", line 1200, in periodic_thread_main
-    periodic_pass()
-  File "/Applications/renpy-8.1.1-sdk/renpy/audio/audio.py", line 1142, in periodic_pass
-    c.periodic()
-  File "/Applications/renpy-8.1.1-sdk/renpy/audio/audio.py", line 534, in periodic
-    topf = load(filename)
-  File "/Applications/renpy-8.1.1-sdk/renpy/audio/audio.py", line 72, in load
-    rv = renpy.loader.load(fn, directory="audio")
+  File "/Applications/renpy-8.1.1-sdk/renpy/display/core.py", line 4172, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Applications/renpy-8.1.1-sdk/renpy/display/core.py", line 2779, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Applications/renpy-8.1.1-sdk/renpy/display/layout.py", line 886, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Applications/renpy-8.1.1-sdk/renpy/display/layout.py", line 886, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Applications/renpy-8.1.1-sdk/renpy/display/layout.py", line 886, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Applications/renpy-8.1.1-sdk/renpy/display/screen.py", line 731, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Applications/renpy-8.1.1-sdk/renpy/display/layout.py", line 886, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Applications/renpy-8.1.1-sdk/renpy/display/layout.py", line 1371, in render
+    back = render(style.background, bw, bh, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "/Applications/renpy-8.1.1-sdk/renpy/display/im.py", line 676, in render
+    return cache.get(self, render=True)
+  File "/Applications/renpy-8.1.1-sdk/renpy/display/im.py", line 330, in get
+    surf = image.load()
+  File "/Applications/renpy-8.1.1-sdk/renpy/display/im.py", line 803, in load
+    raise e
+  File "/Applications/renpy-8.1.1-sdk/renpy/display/im.py", line 757, in load
+    filelike = renpy.loader.load(self.filename, directory="images")
   File "/Applications/renpy-8.1.1-sdk/renpy/loader.py", line 833, in load
     raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'voice/start_984ab428.ogg'.
+OSError: Couldn't find file 'gui/overlay/main_menu.png'.
 
 macOS-10.16-x86_64-i386-64bit x86_64
 Ren'Py 8.1.1.23060707
-avdemo 1.0
-Sun Jul 30 02:56:01 2023
+avdemo 0.1
+Mon Jul 31 02:06:19 2023
