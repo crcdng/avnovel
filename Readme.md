@@ -1,5 +1,10 @@
 # Audio-Visual Novel Demo
 
+*This code is licensed under GPL for noncommercial use. For commercial use / custom game engine integration contact me at [crcdng.com](crcdng.com)*
+<br>
+<br>
+<br>
+
 This is a demo for an audiovisual novel system, integrating [ElevenLabs](https://elevenlabs.io/) text-to-speech synthesis with the [Ren'Py](https://www.renpy.org/) visual novel engine. Made in 48 hours during the [LabLab](https://lablab.ai/) [ElevenLabs AI hackathon](https://lablab.ai/event/eleven-labs-ai-hackathon).
 
 A visual novel is a form of interactive fiction, one that combines text, images and animations. Ren'Py is a popular and open source visual novel engine based on Python. It has been used to create thousands of interactive stories, visual novels and games, including [Andromeda Six](https://store.steampowered.com/app/1642870/Andromeda_Six/), [Highway Blossoms](https://store.steampowered.com/app/451760/Highway_Blossoms/) and [Doki Doki Literature Club](https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/). 
@@ -53,8 +58,8 @@ Possible code improvements / Next steps:
 
 ### Credits:
 
-Characters: [kid-blue](kid-blue.deviantart.com)
-Backgrounds: TODO
+Characters for the demo project: [kid-blue](kid-blue.deviantart.com)
+Backgrounds for the demo project: Ren'Py example backgrounds
 
 Ren'Py license: https://www.renpy.org/doc/html/license.html
 
