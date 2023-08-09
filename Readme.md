@@ -1,6 +1,6 @@
 # Audio-Visual Novel Demo
 
-*This code is licensed under GPL for noncommercial use. For commercial use / custom game engine integration contact me at [crcdng.com](crcdng.com)*
+*This code is licensed under GPL for noncommercial use. For commercial use / custom game engine integration contact me at [crcdng.com](https://crcdng.com)*
 <br>
 <br>
 <br>
